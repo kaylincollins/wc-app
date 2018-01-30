@@ -1,0 +1,138 @@
+<form>
+	<p>
+  Please fill out this form after booking your checkride. 
+</p>
+
+<div class="color-light col">
+	<p class="header">Applicant Information</p>
+	<p class="asterisk">*Must match FAA documents</p>
+</div>
+
+<div class="container color-light">
+	<div class="col">
+		<p>First Name</p>
+			<input type="text" class="txt" name="first" placeholder="First Name" [(ngModel)]="firstName">
+		<p>Phone Number</p>
+			<input type="text" class="txt" name="phone" placeholder="Phone Number" [(ngModel)]="phone">
+		<p>E-mail</p>
+			<input type="text" class="txt" name="email" placeholder="E-mail" [(ngModel)]="email">
+		<p>FTN Number</p>
+			<input type="text" class="txt" name="ftn" placeholder="FAA Tracking Number" [(ngModel)]="ftn">
+	</div>
+
+	<div class="col">
+		<p>Middle Name</p>
+			<input type="text" class="txt" name="middle" placeholder="Name" [(ngModel)]="middleName">
+	</div>
+
+	<div class="col">
+		<p>Last Name</p>
+			<input type="text" class="txt" name="last" placeholder="Name" [(ngModel)]="lastName">
+	</div>
+</div>
+
+<br>
+
+<div class="color-light col">
+	<p class="header">Recommending Instructor Information</p>
+</div>
+<div class="container color-light">
+	<div class="col">
+		<p>Name</p>
+			<input type="text" class="txt" name="instructorName" placeholder="Name" [(ngModel)]="instructorName">
+		<p>Phone Number</p>
+			<input type="text" class="txt" name="instructorPhone" placeholder="Phone Number" [(ngModel)]="instructorPhone">
+		<p>E-mail</p>
+			<input type="text" class="txt" name="instructorEmail" placeholder="E-mail" [(ngModel)]="instructorEmail">
+	</div>
+</div>
+
+<br>
+
+<div class="container color-light">
+	<div class="col">
+		<p class="header">Exam Details</p>
+	</div>
+</div>
+<div class="container color-light">
+	<div class="col">
+		<p>Date of Exam</p>
+			<input type="date" name="date" [(ngModel)]="date">
+
+		<p>Airport Identifier</p>
+			<input type="text" class="txt" name="airport" placeholder="Airport" [(ngModel)]="airport">
+
+		<p>Aircraft Make & Model</p>
+			<input type="text" class="txt" name="aircraft" placeholder="Aircraft" [(ngModel)]="aircraft">
+
+		<p>Certification/Rating Sought</p>
+
+	    <input type="radio" id="sPrivate" name="rating" value="sPrivate" [(ngModel)]="rating">
+	    <label for="ratingChoice1">Single Engine Private</label><br>
+
+	    <input type="radio" id="sInstrument" name="rating" value="sInstrument" [(ngModel)]="rating">
+	    <label for="ratingChoice2">Single Engine Instrument</label><br>
+
+	    <input type="radio" id="sCommercial" name="rating" value="sCommercial" [(ngModel)]="rating">
+	    <label for="ratingChoice3">Single Engine Commercial</label>
+
+		<p>Retest</p>
+			<input type="radio" id="yes" name="retest" value="yes" [(ngModel)]="retest">
+	    <label for="retestChoice1">Yes</label>
+
+	    <input type="radio" id="no" name="retest" value="no" [(ngModel)]="retest">
+	    <label for="retestChoice2">No</label>
+
+		<p>Discontinuance</p>
+			<input type="radio" id="yes" name="discontinuance" value="yes" [(ngModel)]="discontinuance">
+	    <label for="discontinuanceChoice1">Yes</label>
+
+	    <input type="radio" id="no" name="discontinuance" value="no" [(ngModel)]="discontinuance">
+	    <label for="discontinuanceChoice2">No</label>
+
+		<p>Payment Method</p>
+			<input type="radio" id="cash" name="payment" value="cash" [(ngModel)]="payment">
+	    <label for="paymentChoice1">Cash</label>
+
+	    <input type="radio" id="check" name="payment" value="check" [(ngModel)]="payment">
+	    <label for="paymentChoice2">Check</label>
+				
+	</div>
+
+	<div class="col">
+		<p>Time</p>
+			<input type="time" name="time">
+
+		<p>Meeting place <em>(i.e. flight school)</em></p>
+			<input type="text" class="txt" name="meetLocation" placeholder="Meeting place" [(ngModel)]="meetingLocation">
+
+		<p>N Number <em>(if known)</em></p>
+			<input type="text" class="txt" name="tailNumber" placeholder="N Number" [(ngModel)]="tailNumber">
+
+		<p>  </p><br><br>
+			<input type="radio" id="mPrivate" name="rating" value="mPrivate" [(ngModel)]="rating">
+		    <label for="ratingChoice4">Multi-Engine Private</label><br>
+
+		    <input type="radio" id="mInstrument" name="rating" value="mInstrument" [(ngModel)]="rating">
+		    <label for="ratingChoice5">Multi-Engine Instrument</label><br>
+
+		    <input type="radio" id="mCommercial" name="rating" value="mCommercial" [(ngModel)]="rating">
+		    <label for="ratingChoice6">Multi-Engine Commercial</label>
+
+	</div>
+</div>
+
+<div class="col color-light end">
+	<p>How will you be submitting your application?</p>
+		<input type="radio" id="electronic" name="submission" value="electronic" [(ngModel)]="submission">
+    <label for="submissionChoice1">IACRA <em>(preferred)</em></label>
+
+    <input type="radio" id="paper" name="submission" value="paper" [(ngModel)]="submission">
+    <label for="submissionChoice2">FAA Form 8710-1</label>
+</div>
+
+
+	<div class="col">
+		<input type="submit" class="btn" value="Submit" (click)="submitForm()">
+	</div>
+</form>

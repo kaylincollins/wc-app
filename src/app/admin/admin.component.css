@@ -1,0 +1,17 @@
+.container {
+	display: grid;
+	grid-template-columns: auto;
+	padding: .4em 1.3em 0em;
+	margin-bottom: 1em;
+}
+.col {
+	padding: .4em 1.3em;
+}
+.color-dark {
+	/*background: #2885C4;*/
+	background: #494E6B
+}
+.color-light {
+	/*background: #5783F1;*/
+	background: #985E6D;
+}

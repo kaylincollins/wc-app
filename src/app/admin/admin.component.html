@@ -1,0 +1,52 @@
+<div class="container color-light" *ngFor="let result of results" (click)="showDetails($event)">
+	<ul>
+		<li>
+			Name: {{ result.firstName }} {{ result.middleName }} {{ result.lastName }}
+		</li><br>
+		<li>
+			e-mail: {{ result.email }}
+		</li><br>
+		<li>
+			FTN Number: {{ result.ftn }}
+		</li><br>
+		<li>
+			Instructor Name: {{ result.instructorName }}
+		</li><br>
+		<li>
+			Instructor Phone: {{ result.instructorPhone }}
+		</li><br>
+		<li>
+			Checkride Date: {{ result.date }}
+		</li><br>
+		<li>
+			Checkride Time: {{ result.time }}
+		</li><br>
+		<li>
+			Airport: {{ result.airport }}
+		</li><br>
+		<li>
+			Aircraft: {{ result.aircraft }}
+		</li><br>
+		<li>
+			Tail Number: {{ result.tailNumber }}
+		</li><br>
+		<li>
+			Meeting Location: {{ result.meetingLocation }}
+		</li><br>
+		<li>
+			Rating: {{ result.rating }}
+		</li><br>
+		<li>
+			Retest: {{ result.retest }}
+		</li><br>
+		<li>
+			Discontinuation: {{ result.discontinuation }}
+		</li><br>
+		<li>
+			Payment Method: {{ result.payment }}
+		</li><br>
+		<li>
+			Submission Method: {{ result.submission }}
+		</li><br>
+	</ul>
+</div>

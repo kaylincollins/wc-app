@@ -1,0 +1,21 @@
+.container {
+	display: grid;
+	grid-template-columns: 50% auto;
+}
+.col {
+	padding: .4em 1.3em;
+}
+.color-light {
+	background: #98878F;
+}
+img {
+    width:auto;
+    max-width:100%;
+    height:auto;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 1rem;
+}
